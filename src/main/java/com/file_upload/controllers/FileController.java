@@ -30,6 +30,7 @@ public class FileController {
         return fileDownloadUri;
     }
 
+
     @GetMapping("/file/{fileName:.+}")
     public Resource downloadFile(@PathVariable String fileName, HttpServletRequest request){
 
