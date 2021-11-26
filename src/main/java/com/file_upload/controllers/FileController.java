@@ -34,9 +34,7 @@ public class FileController {
     public Resource downloadFile(@PathVariable String fileName, HttpServletRequest request){
 
         Resource resource = this.fileStorageService.loadFileAsResource(fileName);
-
         String contentType=null;
-
         try {
             contentType = request.getServletContext().getMimeType(resource.getFile().getAbsolutePath());
         }catch (IOException e){
